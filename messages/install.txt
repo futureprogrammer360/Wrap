@@ -1,0 +1,46 @@
+===================================================================
+__    __
+/ / /\ \ \_ __ __ _ _ __
+\ \/  \/ / '__/ _` | '_ \
+ \  /\  /| | | (_| | |_) |
+  \/  \/ |_|  \__,_| .__/
+                   |_|
+
+===================================================================
+
+Hey there!
+
+Thank you for installing Wrap, a simple but powerful tool that will help you write programs faster.
+
+-------------------------------------------------------------------
+
+How to use Wrap to code faster:
+
+Running the `Wrap: Wrap` command, the text selected or under cursor will be wrapped by brackets (customizable), and a placeholder will be placed before the starting bracket and be selected.
+
+Example:
+- Original code: x (x selected or under cursor)
+- After `Wrap: Wrap`: abc(x) (abc selected)
+
+-------------------------------------------------------------------
+
+How to customize Wrap:
+
+To change the type of brackets used by Wrap, run the `Preferences: Wrap` command in the command palette.
+
+To add and customize keybindings, run the `Preferences: Wrap Key Bindings` command in the command palette.
+Below is an example keybinding file:
+****************************************************
+[
+    {
+        "keys": ["alt+w"],
+        "command": "wrap"
+    },
+]
+****************************************************
+
+-------------------------------------------------------------------
+
+To learn more about this plugin, check out the README.md file via the `Wrap: Open Readme` command in command palette.
+
+GitHub homepage: https://github.com/futureprogrammer360/Wrap

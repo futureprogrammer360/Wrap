@@ -1,0 +1,29 @@
+[
+    {
+        "caption": "Wrap: Wrap",
+        "command": "wrap"
+    },
+    {
+        "caption": "Preferences: Wrap Key Bindings",
+        "command": "edit_settings",
+        "args": {
+          "base_file": "${packages}/Wrap/Default (${platform}).sublime-keymap",
+          "default": "[\n\t$0\n]\n"
+        }
+    },
+    {
+        "caption": "Preferences: Wrap",
+        "command": "edit_settings",
+        "args": {
+          "base_file": "${packages}/Wrap/Wrap.sublime-settings",
+          "default": "{\n\t$0\n}\n"
+        }
+    },
+    {
+        "caption": "Wrap: Open Readme",
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/Wrap/README.md"
+        }
+    }
+]

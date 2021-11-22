@@ -1,0 +1,4 @@
+{
+    // Type of brackets to use (examples: (), [], {})
+    "bracket_type": "()"
+}

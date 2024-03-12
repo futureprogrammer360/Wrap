@@ -1,0 +1,3 @@
+v1.1.0
+
+There is now the option to add special contexts where overriding bracket types should be used. Use `Preferences: Wrap` in the command palette to open the settings file and do so.

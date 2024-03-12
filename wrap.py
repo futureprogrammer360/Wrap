@@ -5,7 +5,15 @@ import sublime_plugin
 class WrapCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         settings = sublime.load_settings("Wrap.sublime-settings")
-        a, b = settings.get("bracket_type", "()")
+        extension = self.view.file_name().split(".")[-1]
+
+        # Determine bracket type
+        for c in settings.get("contexts"):
+            if self.view.match_selector(self.view.sel()[0].begin(), c.get("scope")) or extension in c.get("extensions"):
+                a, b = c.get("bracket_type", "()")
+                break
+        else:
+            a, b = settings.get("bracket_type", "()")
 
         region = self.view.sel()[0]
 

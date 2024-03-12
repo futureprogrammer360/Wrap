@@ -1,4 +1,14 @@
 {
-    // Type of brackets to use (examples: (), [], {})
-    "bracket_type": "()"
+    // Default bracket type (examples: (), [], {})
+    "bracket_type": "()",
+
+    // Context-specific bracket types (overrides default)
+    "contexts": [
+        {
+            "name": "LaTeX",
+            "scope": "text.tex.latex",
+            "extensions": ["tex"],
+            "bracket_type": "{}"
+        }
+    ]
 }

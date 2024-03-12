@@ -27,9 +27,11 @@ The Wrap plugin can be customized to your requirements.
 
 ### 🔧 Preferences
 
-The type of brackets used by `Wrap` can be customized via the command `Preferences: Wrap`.
+The types of brackets used by `Wrap` can be customized via the command `Preferences: Wrap`.
 
-Simply change the `bracket_type` to your preference.
+Change the default bracket type with the `bracket_type` setting.
+
+Change context-specific bracket types with the `contexts` setting.
 
 ### ⌨ Keybindings
 

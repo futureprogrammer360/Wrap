@@ -5,7 +5,12 @@ import sublime_plugin
 class WrapCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         settings = sublime.load_settings("Wrap.sublime-settings")
-        extension = self.view.file_name().split(".")[-1]
+
+        file_name = self.view.file_name()
+        if file_name:
+            extension = self.view.file_name().split(".")[-1]
+        else:  # In blank view without file open
+            extension = ""
 
         # Determine bracket type
         for c in settings.get("contexts"):

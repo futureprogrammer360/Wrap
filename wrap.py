@@ -14,7 +14,9 @@ class WrapCommand(sublime_plugin.TextCommand):
 
         # Determine bracket type
         for c in settings.get("contexts"):
-            if self.view.match_selector(self.view.sel()[0].begin(), c.get("scope")) or extension in c.get("extensions"):
+            scope = c.get("scope")
+            extensions = c.get("extensions")
+            if (scope is not None and self.view.match_selector(self.view.sel()[0].begin(), scope)) or (extensions is not None and extension in extensions):
                 a, b = c.get("bracket_type", "()")
                 break
         else:

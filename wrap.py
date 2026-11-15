@@ -13,14 +13,20 @@ class WrapCommand(sublime_plugin.TextCommand):
             extension = ""
 
         # Determine bracket type
+        bracket_type = settings.get("bracket_type", "()")
         for c in settings.get("contexts"):
             scope = c.get("scope")
             extensions = c.get("extensions")
             if (scope is not None and self.view.match_selector(self.view.sel()[0].begin(), scope)) or (extensions is not None and extension in extensions):
-                a, b = c.get("bracket_type", "()")
+                bracket_type = c.get("bracket_type", "()")
                 break
-        else:
-            a, b = settings.get("bracket_type", "()")
+        try:
+            a, b = bracket_type
+        except:
+            sublime.error_message(
+                "[Wrap] Invalid bracket type: %r. For a pair of brackets that is not 2 characters, use a list in Wrap.sublime-settings." % bracket_type
+            )
+            return
 
         region = self.view.sel()[0]
 

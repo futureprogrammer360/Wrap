@@ -1,5 +1,7 @@
 {
-    // Default bracket type (examples: (), [], {})
+    // Default bracket type
+    // - 2-character strings: "()", "[]", "{}"
+    // - list of [opening, closing]: ["{{ ", " }}"], ["[[ ", " ]]"]
     "bracket_type": "()",
 
     // Context-specific bracket types (overrides default)

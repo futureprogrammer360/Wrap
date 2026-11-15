@@ -33,6 +33,11 @@ Change the default bracket type with the `bracket_type` setting.
 
 Change context-specific bracket types with the `contexts` setting.
 
+Default and context-specific `bracket_type`s can be strings or lists. Strings can be used when a pair of brackets is 2 characters. Otherwise, use a list. Here are some examples:
+
+* `"()"`, `"[]"`, `"{}"`
+* `["{{ ", " }}"]`, `["[[ ", " ]]"]`
+
 ### ⌨ Keybindings
 
 Keybindings can be created for the `wrap` command.
